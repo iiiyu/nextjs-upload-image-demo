@@ -14,6 +14,9 @@ export function CustomEditor(props) {
       onInit={(evt, editor) => (editorRef.current = editor)}
       value={props.content}
       init={{
+        selector: "textarea", // change this value according to your HTML
+        images_upload_url: "/api/upload/file",
+        automatic_uploads: true,
         height: 500,
         menubar: true,
         plugins: [
